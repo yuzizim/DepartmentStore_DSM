@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z/EQIoxizEg=",
+  "dgSpecHash": "TcQ8eZI3zqM=",
   "success": true,
-  "projectFilePath": "H:\\PraticeCodeC#\\PRN232\\SOL.DepartmentStore\\DepartmentStore.Client\\DepartmentStore.Client.csproj",
+  "projectFilePath": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Client\\DepartmentStore.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lenovo\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\lenovo\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

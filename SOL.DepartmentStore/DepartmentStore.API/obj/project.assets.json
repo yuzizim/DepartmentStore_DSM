@@ -5827,11 +5827,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\PraticeCodeC#\\PRN232\\SOL.DepartmentStore\\DepartmentStore.API\\DepartmentStore.API.csproj",
+      "projectUniqueName": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.API\\DepartmentStore.API.csproj",
       "projectName": "DepartmentStore.API",
-      "projectPath": "H:\\PraticeCodeC#\\PRN232\\SOL.DepartmentStore\\DepartmentStore.API\\DepartmentStore.API.csproj",
+      "projectPath": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.API\\DepartmentStore.API.csproj",
       "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-      "outputPath": "H:\\PraticeCodeC#\\PRN232\\SOL.DepartmentStore\\DepartmentStore.API\\obj\\",
+      "outputPath": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5852,11 +5852,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "H:\\PraticeCodeC#\\PRN232\\SOL.DepartmentStore\\DepartmentStore.Service\\DepartmentStore.Service.csproj": {
-              "projectPath": "H:\\PraticeCodeC#\\PRN232\\SOL.DepartmentStore\\DepartmentStore.Service\\DepartmentStore.Service.csproj"
+            "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Service\\DepartmentStore.Service.csproj": {
+              "projectPath": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Service\\DepartmentStore.Service.csproj"
             },
-            "H:\\PraticeCodeC#\\PRN232\\SOL.DepartmentStore\\DepartmentStore.Utilities\\DepartmentStore.Utilities.csproj": {
-              "projectPath": "H:\\PraticeCodeC#\\PRN232\\SOL.DepartmentStore\\DepartmentStore.Utilities\\DepartmentStore.Utilities.csproj"
+            "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Utilities\\DepartmentStore.Utilities.csproj": {
+              "projectPath": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Utilities\\DepartmentStore.Utilities.csproj"
             }
           }
         }

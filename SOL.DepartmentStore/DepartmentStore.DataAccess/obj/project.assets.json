@@ -4086,11 +4086,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\PraticeCodeC#\\PRN232\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj",
+      "projectUniqueName": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj",
       "projectName": "DepartmentStore.DataAccess",
-      "projectPath": "H:\\PraticeCodeC#\\PRN232\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj",
+      "projectPath": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj",
       "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-      "outputPath": "H:\\PraticeCodeC#\\PRN232\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\obj\\",
+      "outputPath": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
