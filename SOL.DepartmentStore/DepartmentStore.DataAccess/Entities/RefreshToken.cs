@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DepartmentStore.DataAccess.Entities;
+using System;
 
 namespace DepartmentStore.Entities
 {

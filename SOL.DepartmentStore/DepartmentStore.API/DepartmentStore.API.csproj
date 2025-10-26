@@ -27,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DepartmentStore.DataAccess\DepartmentStore.DataAccess.csproj" />
     <ProjectReference Include="..\DepartmentStore.Service\DepartmentStore.Service.csproj" />
     <ProjectReference Include="..\DepartmentStore.Utilities\DepartmentStore.Utilities.csproj" />
   </ItemGroup>

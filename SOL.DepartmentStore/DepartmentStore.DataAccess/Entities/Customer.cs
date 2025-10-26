@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using DepartmentStore.DataAccess.Entities;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace DepartmentStore.Entities

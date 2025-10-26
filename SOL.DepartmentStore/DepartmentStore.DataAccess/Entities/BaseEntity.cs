@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace DepartmentStore.Entities
+namespace DepartmentStore.DataAccess.Entities
 {
     public abstract class BaseEntity
     {

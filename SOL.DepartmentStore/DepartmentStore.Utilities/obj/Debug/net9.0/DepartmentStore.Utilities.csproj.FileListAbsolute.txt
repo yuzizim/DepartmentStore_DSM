@@ -9,3 +9,12 @@ H:\PraticeCodeC#\PRN232\SOL.DepartmentStore\DepartmentStore.Utilities\obj\Debug\
 H:\PraticeCodeC#\PRN232\SOL.DepartmentStore\DepartmentStore.Utilities\obj\Debug\net9.0\refint\DepartmentStore.Utilities.dll
 H:\PraticeCodeC#\PRN232\SOL.DepartmentStore\DepartmentStore.Utilities\obj\Debug\net9.0\DepartmentStore.Utilities.pdb
 H:\PraticeCodeC#\PRN232\SOL.DepartmentStore\DepartmentStore.Utilities\obj\Debug\net9.0\ref\DepartmentStore.Utilities.dll
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Utilities\obj\Debug\net9.0\DepartmentStore.Utilities.csproj.AssemblyReference.cache
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Utilities\obj\Debug\net9.0\DepartmentStore.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Utilities\obj\Debug\net9.0\DepartmentStore.Utilities.AssemblyInfoInputs.cache
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Utilities\obj\Debug\net9.0\DepartmentStore.Utilities.AssemblyInfo.cs
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Utilities\obj\Debug\net9.0\DepartmentStore.Utilities.csproj.CoreCompileInputs.cache
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Utilities\obj\Debug\net9.0\DepartmentStore.Utilities.sourcelink.json
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Utilities\obj\Debug\net9.0\DepartmentStore.Utilities.dll
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Utilities\obj\Debug\net9.0\refint\DepartmentStore.Utilities.dll
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Utilities\obj\Debug\net9.0\DepartmentStore.Utilities.pdb

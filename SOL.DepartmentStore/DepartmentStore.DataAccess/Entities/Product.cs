@@ -1,7 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using DepartmentStore.Entities;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DepartmentStore.Entities
+namespace DepartmentStore.DataAccess.Entities
 {
     public class Product : BaseEntity
     {

@@ -32,6 +32,9 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+              "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj": {
+                "projectPath": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj"
+              },
               "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Service\\DepartmentStore.Service.csproj": {
                 "projectPath": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Service\\DepartmentStore.Service.csproj"
               },
@@ -327,7 +330,11 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj": {
+                "projectPath": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -345,6 +352,16 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

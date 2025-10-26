@@ -160,3 +160,15 @@ H:\PraticeCodeC#\PRN232\SOL.DepartmentStore\DepartmentStore.API\bin\Debug\net9.0
 H:\PraticeCodeC#\PRN232\SOL.DepartmentStore\DepartmentStore.API\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 H:\PraticeCodeC#\PRN232\SOL.DepartmentStore\DepartmentStore.API\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 H:\PraticeCodeC#\PRN232\SOL.DepartmentStore\DepartmentStore.API\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.API\obj\Debug\net9.0\DepartmentStore.API.csproj.AssemblyReference.cache
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.API\obj\Debug\net9.0\rpswa.dswa.cache.json
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.API\obj\Debug\net9.0\DepartmentStore.API.GeneratedMSBuildEditorConfig.editorconfig
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.API\obj\Debug\net9.0\DepartmentStore.API.AssemblyInfoInputs.cache
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.API\obj\Debug\net9.0\DepartmentStore.API.AssemblyInfo.cs
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.API\obj\Debug\net9.0\DepartmentStore.API.csproj.CoreCompileInputs.cache
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.API\obj\Debug\net9.0\DepartmentStore.API.MvcApplicationPartsAssemblyInfo.cs
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.API\obj\Debug\net9.0\DepartmentStore.API.MvcApplicationPartsAssemblyInfo.cache
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.API\obj\Debug\net9.0\DepartmentStore.API.sourcelink.json
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.API\obj\Debug\net9.0\DepartmentStore.API.dll
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.API\obj\Debug\net9.0\refint\DepartmentStore.API.dll
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.API\obj\Debug\net9.0\DepartmentStore.API.pdb

@@ -124,3 +124,16 @@ H:\PraticeCodeC#\PRN232\SOL.DepartmentStore\DepartmentStore.Client\obj\Debug\net
 H:\PraticeCodeC#\PRN232\SOL.DepartmentStore\DepartmentStore.Client\obj\Debug\net9.0\DepartmentStore.Client.pdb
 H:\PraticeCodeC#\PRN232\SOL.DepartmentStore\DepartmentStore.Client\obj\Debug\net9.0\DepartmentStore.Client.genruntimeconfig.cache
 H:\PraticeCodeC#\PRN232\SOL.DepartmentStore\DepartmentStore.Client\obj\Debug\net9.0\ref\DepartmentStore.Client.dll
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Client\obj\Debug\net9.0\DepartmentStore.Client.csproj.AssemblyReference.cache
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Client\obj\Debug\net9.0\rpswa.dswa.cache.json
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Client\obj\Debug\net9.0\DepartmentStore.Client.GeneratedMSBuildEditorConfig.editorconfig
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Client\obj\Debug\net9.0\DepartmentStore.Client.AssemblyInfoInputs.cache
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Client\obj\Debug\net9.0\DepartmentStore.Client.AssemblyInfo.cs
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Client\obj\Debug\net9.0\DepartmentStore.Client.csproj.CoreCompileInputs.cache
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Client\obj\Debug\net9.0\DepartmentStore.Client.MvcApplicationPartsAssemblyInfo.cache
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Client\obj\Debug\net9.0\DepartmentStore.Client.RazorAssemblyInfo.cache
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Client\obj\Debug\net9.0\DepartmentStore.Client.RazorAssemblyInfo.cs
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Client\obj\Debug\net9.0\DepartmentStore.Client.sourcelink.json
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Client\obj\Debug\net9.0\DepartmentStore.Client.dll
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Client\obj\Debug\net9.0\refint\DepartmentStore.Client.dll
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Client\obj\Debug\net9.0\DepartmentStore.Client.pdb

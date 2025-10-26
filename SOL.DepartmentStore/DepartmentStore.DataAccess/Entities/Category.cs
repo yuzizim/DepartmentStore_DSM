@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using DepartmentStore.DataAccess.Entities;
+using System.ComponentModel.DataAnnotations;
 
 namespace DepartmentStore.Entities
 {
