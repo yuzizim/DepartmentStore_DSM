@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "DepartmentStore.API\\DepartmentStore.API.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
+      },
+      {
+        "Path": "DepartmentStore.Client\\DepartmentStore.Client.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

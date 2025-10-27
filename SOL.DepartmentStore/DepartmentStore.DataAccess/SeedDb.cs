@@ -17,14 +17,8 @@ namespace DepartmentStore.DataAccess
 
             await context.Database.MigrateAsync();
 
-            // 1️⃣ Roles mặc định
-            string[] roles = new[]
-            {
-                "Admin",
-                "Manager",
-                "SalesEmployee",
-                "InventoryEmployee"
-            };
+            // 1️⃣ Seed Roles
+            string[] roles = { "Admin", "Manager", "SalesEmployee", "InventoryEmployee" };
 
             foreach (var role in roles)
             {
@@ -39,23 +33,80 @@ namespace DepartmentStore.DataAccess
                 }
             }
 
-            // 2️⃣ Admin mặc định
-            var adminEmail = "admin@dsm.com";
-            if (await userManager.FindByEmailAsync(adminEmail) == null)
+            // 2️⃣ Seed Users
+            await SeedUserAsync(userManager, "admin@dsm.com", "Admin", "System Administrator", new[] { "Admin" });
+            await SeedUserAsync(userManager, "manager@dsm.com", "storemanager", "Store Manager", new[] { "Manager" });
+            await SeedUserAsync(userManager, "sales@dsm.com", "salesuser", "Sales Employee", new[] { "SalesEmployee" });
+            await SeedUserAsync(userManager, "inventory@dsm.com", "inventoryuser", "Inventory Employee", new[] { "InventoryEmployee" });
+
+            // 3️⃣ Seed Sample Data (if empty)
+            if (!context.Categories.Any())
             {
-                var adminUser = new AppUser
+                var cat = new Category { Id = Guid.NewGuid(), Name = "General", Description = "General category", CreatedAt = DateTime.UtcNow };
+                context.Categories.Add(cat);
+
+                var sup = new Supplier
                 {
-                    UserName = "admin",
-                    Email = adminEmail,
+                    Id = Guid.NewGuid(),
+                    Name = "Default Supplier",
+                    Email = "supplier@dsm.com",
+                    Phone = "0123456789",
+                    Address = "Hanoi, Vietnam",
+                    CreatedAt = DateTime.UtcNow
+                };
+                context.Suppliers.Add(sup);
+
+                var product = new Product
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Sample Product",
+                    Description = "Seeded product for testing",
+                    Price = 100000,
+                    CategoryId = cat.Id,
+                    SupplierId = sup.Id,
+                    CreatedAt = DateTime.UtcNow
+                };
+                context.Products.Add(product);
+
+                var inv = new Inventory
+                {
+                    Id = Guid.NewGuid(),
+                    ProductId = product.Id,
+                    QuantityOnHand = 200,
+                    ReorderLevel = 20,
+                    LastRestockDate = DateTime.UtcNow,
+                    CreatedAt = DateTime.UtcNow
+                };
+                context.Inventories.Add(inv);
+
+                await context.SaveChangesAsync();
+            }
+        }
+
+        private static async Task SeedUserAsync(
+            UserManager<AppUser> userManager,
+            string email,
+            string username,
+            string fullname,
+            string[] roles)
+        {
+            var existingUser = await userManager.FindByEmailAsync(email);
+            if (existingUser == null)
+            {
+                var user = new AppUser
+                {
+                    UserName = username,
+                    Email = email,
                     EmailConfirmed = true,
-                    FullName = "System Administrator",
+                    FullName = fullname,
                     CreatedAt = DateTime.UtcNow
                 };
 
-                var result = await userManager.CreateAsync(adminUser, "Admin@123");
+                var result = await userManager.CreateAsync(user, "Test@123");
                 if (result.Succeeded)
                 {
-                    await userManager.AddToRoleAsync(adminUser, "Admin");
+                    foreach (var role in roles)
+                        await userManager.AddToRoleAsync(user, role);
                 }
             }
         }
