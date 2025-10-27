@@ -3,72 +3,12 @@
   "WorkspaceRootPath": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40988F17-2B73-463E-AAEF-8CD868ACC6A0}|DepartmentStore.Utilities\\DepartmentStore.Utilities.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.utilities\\helpers\\mapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40988F17-2B73-463E-AAEF-8CD868ACC6A0}|DepartmentStore.Utilities\\DepartmentStore.Utilities.csproj|solutionrelative:departmentstore.utilities\\helpers\\mapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40988F17-2B73-463E-AAEF-8CD868ACC6A0}|DepartmentStore.Utilities\\DepartmentStore.Utilities.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.utilities\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40988F17-2B73-463E-AAEF-8CD868ACC6A0}|DepartmentStore.Utilities\\DepartmentStore.Utilities.csproj|solutionrelative:departmentstore.utilities\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40988F17-2B73-463E-AAEF-8CD868ACC6A0}|DepartmentStore.Utilities\\DepartmentStore.Utilities.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.utilities\\departmentstore.utilities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{40988F17-2B73-463E-AAEF-8CD868ACC6A0}|DepartmentStore.Utilities\\DepartmentStore.Utilities.csproj|solutionrelative:departmentstore.utilities\\departmentstore.utilities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25E73A65-EF15-414A-85F2-3E43A5962950}|DepartmentStore.Service\\DepartmentStore.Service.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.service\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25E73A65-EF15-414A-85F2-3E43A5962950}|DepartmentStore.Service\\DepartmentStore.Service.csproj|solutionrelative:departmentstore.service\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25E73A65-EF15-414A-85F2-3E43A5962950}|DepartmentStore.Service\\DepartmentStore.Service.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.service\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25E73A65-EF15-414A-85F2-3E43A5962950}|DepartmentStore.Service\\DepartmentStore.Service.csproj|solutionrelative:departmentstore.service\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C79D2FF-E0DA-4934-AF25-F811ADAEF42D}|DepartmentStore.API\\DepartmentStore.API.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C79D2FF-E0DA-4934-AF25-F811ADAEF42D}|DepartmentStore.API\\DepartmentStore.API.csproj|solutionrelative:departmentstore.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.dataaccess\\seeddb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|solutionrelative:departmentstore.dataaccess\\seeddb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.dataaccess\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|solutionrelative:departmentstore.dataaccess\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.dataaccess\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|solutionrelative:departmentstore.dataaccess\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.dataaccess\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|solutionrelative:departmentstore.dataaccess\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.dataaccess\\entities\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|solutionrelative:departmentstore.dataaccess\\entities\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.dataaccess\\entities\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|solutionrelative:departmentstore.dataaccess\\entities\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.dataaccess\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|solutionrelative:departmentstore.dataaccess\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.dataaccess\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|solutionrelative:departmentstore.dataaccess\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.dataaccess\\entities\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|solutionrelative:departmentstore.dataaccess\\entities\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.dataaccess\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|solutionrelative:departmentstore.dataaccess\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.dataaccess\\entities\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|solutionrelative:departmentstore.dataaccess\\entities\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.dataaccess\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -77,6 +17,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.dataaccess\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|solutionrelative:departmentstore.dataaccess\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.dataaccess\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|solutionrelative:departmentstore.dataaccess\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.dataaccess\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -91,8 +35,12 @@
       "RelativeMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|solutionrelative:departmentstore.dataaccess\\entities\\approle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.dataaccess\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23195BAC-6B5A-4835-A91A-CFC4C7D2AFAD}|DepartmentStore.DataAccess\\DepartmentStore.DataAccess.csproj|solutionrelative:departmentstore.dataaccess\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2C79D2FF-E0DA-4934-AF25-F811ADAEF42D}|DepartmentStore.API\\DepartmentStore.API.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C79D2FF-E0DA-4934-AF25-F811ADAEF42D}|DepartmentStore.API\\DepartmentStore.API.csproj|solutionrelative:departmentstore.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C79D2FF-E0DA-4934-AF25-F811ADAEF42D}|DepartmentStore.API\\DepartmentStore.API.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2C79D2FF-E0DA-4934-AF25-F811ADAEF42D}|DepartmentStore.API\\DepartmentStore.API.csproj|solutionrelative:departmentstore.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -102,307 +50,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 138,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DepartmentStore.Utilities",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Utilities\\DepartmentStore.Utilities.csproj",
-              "RelativeDocumentMoniker": "DepartmentStore.Utilities\\DepartmentStore.Utilities.csproj",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Utilities\\DepartmentStore.Utilities.csproj",
-              "RelativeToolTip": "DepartmentStore.Utilities\\DepartmentStore.Utilities.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-26T11:05:59.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SeedDb.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\SeedDb.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\SeedDb.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\SeedDb.cs",
-              "RelativeToolTip": "DepartmentStore.DataAccess\\SeedDb.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAnwFIAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T11:04:57.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductDto.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Utilities\\DTOs\\ProductDto.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.Utilities\\DTOs\\ProductDto.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Utilities\\DTOs\\ProductDto.cs",
-              "RelativeToolTip": "DepartmentStore.Utilities\\DTOs\\ProductDto.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA5wBEAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T10:47:11.473Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MapperProfile.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Utilities\\Helpers\\MapperProfile.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.Utilities\\Helpers\\MapperProfile.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Utilities\\Helpers\\MapperProfile.cs",
-              "RelativeToolTip": "DepartmentStore.Utilities\\Helpers\\MapperProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T10:50:14.144Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\AppDbContext.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\AppDbContext.cs",
-              "RelativeToolTip": "DepartmentStore.DataAccess\\AppDbContext.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T11:04:42.119Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Supplier.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Supplier.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\Supplier.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Supplier.cs",
-              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\Supplier.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T11:04:19.681Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RefreshToken.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\RefreshToken.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\RefreshToken.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\RefreshToken.cs",
-              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\RefreshToken.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T11:04:06.949Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Payment.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Payment.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\Payment.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Payment.cs",
-              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\Payment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T11:03:57.894Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.API\\Program.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.API\\Program.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.API\\Program.cs",
-              "RelativeToolTip": "DepartmentStore.API\\Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABMAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T10:52:35.964Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Service\\Implementations\\ProductService.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.Service\\Implementations\\ProductService.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Service\\Implementations\\ProductService.cs",
-              "RelativeToolTip": "DepartmentStore.Service\\Implementations\\ProductService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T10:48:46.362Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IProductService.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Service\\Interfaces\\IProductService.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.Service\\Interfaces\\IProductService.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Service\\Interfaces\\IProductService.cs",
-              "RelativeToolTip": "DepartmentStore.Service\\Interfaces\\IProductService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T10:47:53.914Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "OrderDetail.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\OrderDetail.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\OrderDetail.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\OrderDetail.cs",
-              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\OrderDetail.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T11:03:49.076Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Order.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Order.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\Order.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Order.cs",
-              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T11:03:40.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Inventory.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Inventory.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\Inventory.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Inventory.cs",
-              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\Inventory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T11:03:32.516Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Employee.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\Employee.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Employee.cs",
-              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\Employee.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T11:03:24.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Customer.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\Customer.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Customer.cs",
-              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T11:03:12.77Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Repositories\\IRepository.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Repositories\\IRepository.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Repositories\\IRepository.cs",
-              "RelativeToolTip": "DepartmentStore.DataAccess\\Repositories\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T10:41:11.999Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Repositories\\Repository.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Repositories\\Repository.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Repositories\\Repository.cs",
-              "RelativeToolTip": "DepartmentStore.DataAccess\\Repositories\\Repository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T10:41:29.551Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Category.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Category.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\Category.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Category.cs",
-              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T11:02:50.716Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AppRole.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\AppRole.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\AppRole.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\AppRole.cs",
-              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\AppRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T11:03:00.187Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "AppUser.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\AppUser.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\AppUser.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\AppUser.cs",
-              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\AppUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T11:03:04.72Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\BaseEntity.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\BaseEntity.cs",
-              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\BaseEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T11:02:40.656Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Product.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Product.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\Product.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Product.cs",
-              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T11:00:01.375Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:20:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
@@ -954,6 +603,136 @@
             {
               "$type": "Bookmark",
               "Name": "ST:135:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Product.cs",
+              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\Product.cs",
+              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Product.cs",
+              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T04:46:00.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderDetail.cs",
+              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\OrderDetail.cs",
+              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\OrderDetail.cs",
+              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\OrderDetail.cs",
+              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\OrderDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T04:45:59.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Employee.cs",
+              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\Employee.cs",
+              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Employee.cs",
+              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T04:45:58.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Customer.cs",
+              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\Customer.cs",
+              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Customer.cs",
+              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T04:45:57.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Category.cs",
+              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Category.cs",
+              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\Category.cs",
+              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\Category.cs",
+              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T04:45:39.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\AppUser.cs",
+              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\AppUser.cs",
+              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\AppUser.cs",
+              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\AppUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAvwBEAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T04:45:38.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\BaseEntity.cs",
+              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\BaseEntity.cs",
+              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T04:45:37.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AppRole.cs",
+              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\AppRole.cs",
+              "RelativeDocumentMoniker": "DepartmentStore.DataAccess\\Entities\\AppRole.cs",
+              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.DataAccess\\Entities\\AppRole.cs",
+              "RelativeToolTip": "DepartmentStore.DataAccess\\Entities\\AppRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T04:45:36.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.API\\Program.cs",
+              "RelativeDocumentMoniker": "DepartmentStore.API\\Program.cs",
+              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.API\\Program.cs",
+              "RelativeToolTip": "DepartmentStore.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T04:45:31.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.API\\appsettings.json",
+              "RelativeDocumentMoniker": "DepartmentStore.API\\appsettings.json",
+              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.API\\appsettings.json",
+              "RelativeToolTip": "DepartmentStore.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-27T04:45:28.472Z",
+              "EditorCaption": ""
             }
           ]
         },

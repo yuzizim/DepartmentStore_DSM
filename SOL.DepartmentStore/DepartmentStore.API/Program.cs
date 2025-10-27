@@ -38,6 +38,7 @@ builder.Services
 // ========================= REPOSITORIES & SERVICES =========================
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 // builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();   // <-- uncomment if you have a UnitOfWork
 
 // ========================= AUTOMAPPER =========================

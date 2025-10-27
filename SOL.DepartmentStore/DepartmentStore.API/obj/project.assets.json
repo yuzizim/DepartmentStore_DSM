@@ -2153,7 +2153,9 @@
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "DepartmentStore.DataAccess": "1.0.0",
-          "DepartmentStore.Utilities": "1.0.0"
+          "DepartmentStore.Utilities": "1.0.0",
+          "Microsoft.IdentityModel.Tokens": "8.0.1",
+          "System.IdentityModel.Tokens.Jwt": "8.0.1"
         },
         "compile": {
           "bin/placeholder/DepartmentStore.Service.dll": {}

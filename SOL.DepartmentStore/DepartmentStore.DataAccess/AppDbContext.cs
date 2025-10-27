@@ -1,18 +1,16 @@
-﻿using System;
+﻿using DepartmentStore.DataAccess.Entities;
+using DepartmentStore.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using DepartmentStore.Entities;
-using DepartmentStore.DataAccess.Entities;
+using System;
 
 namespace DepartmentStore.DataAccess
 {
-    // Dùng IdentityDbContext để hỗ trợ AppUser, AppRole
     public class AppDbContext : IdentityDbContext<AppUser, AppRole, Guid>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        // ===== DbSet cho toàn bộ Entities =====
         public DbSet<Category> Categories => Set<Category>();
         public DbSet<Supplier> Suppliers => Set<Supplier>();
         public DbSet<Product> Products => Set<Product>();
@@ -28,73 +26,68 @@ namespace DepartmentStore.DataAccess
         {
             base.OnModelCreating(modelBuilder);
 
-            // ===== Category - Product (1-n)
+            // ===== Relationships =====
             modelBuilder.Entity<Category>()
                 .HasMany(c => c.Products)
                 .WithOne(p => p.Category)
                 .HasForeignKey(p => p.CategoryId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // ===== Supplier - Product (1-n)
             modelBuilder.Entity<Supplier>()
                 .HasMany(s => s.Products)
                 .WithOne(p => p.Supplier)
                 .HasForeignKey(p => p.SupplierId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // ===== Product - Inventory (1-1)
             modelBuilder.Entity<Product>()
                 .HasOne(p => p.Inventory)
                 .WithOne(i => i.Product)
                 .HasForeignKey<Inventory>(i => i.ProductId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // ===== Order - OrderDetail (1-n)
             modelBuilder.Entity<Order>()
                 .HasMany(o => o.OrderDetails)
                 .WithOne(od => od.Order)
                 .HasForeignKey(od => od.OrderId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // ===== Product - OrderDetail (1-n)
             modelBuilder.Entity<Product>()
                 .HasMany<OrderDetail>()
                 .WithOne(od => od.Product)
                 .HasForeignKey(od => od.ProductId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // ===== Order - Payment (1-1)
             modelBuilder.Entity<Order>()
                 .HasOne(o => o.Payment)
                 .WithOne(p => p.Order)
                 .HasForeignKey<Payment>(p => p.OrderId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // ===== User - RefreshToken (1-n)
             modelBuilder.Entity<AppUser>()
                 .HasMany(u => u.RefreshTokens)
                 .WithOne(rt => rt.User)
                 .HasForeignKey(rt => rt.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // ===== Decimal precision
+            // ===== Precision =====
             modelBuilder.Entity<Product>().Property(p => p.Price).HasPrecision(18, 2);
             modelBuilder.Entity<OrderDetail>().Property(od => od.UnitPrice).HasPrecision(18, 2);
             modelBuilder.Entity<Payment>().Property(p => p.Amount).HasPrecision(18, 2);
             modelBuilder.Entity<Employee>().Property(e => e.Salary).HasPrecision(18, 2);
             modelBuilder.Entity<Order>().Property(o => o.TotalAmount).HasPrecision(18, 2);
 
-            // ===== Seed Data mẫu =====
-            var catId = Guid.NewGuid();
-            var suppId = Guid.NewGuid();
-            var prodId = Guid.NewGuid();
+            // ===== Seed Static Data =====
+            var catId = Guid.Parse("11111111-1111-1111-1111-111111111111");
+            var suppId = Guid.Parse("22222222-2222-2222-2222-222222222222");
+            var prodId = Guid.Parse("33333333-3333-3333-3333-333333333333");
+            var now = DateTime.Parse("2025-01-01T00:00:00Z");
 
             modelBuilder.Entity<Category>().HasData(new Category
             {
                 Id = catId,
                 Name = "General",
                 Description = "Default category",
-                CreatedAt = DateTime.UtcNow
+                CreatedAt = now
             });
 
             modelBuilder.Entity<Supplier>().HasData(new Supplier
@@ -103,7 +96,7 @@ namespace DepartmentStore.DataAccess
                 Name = "Default Supplier",
                 Email = "supplier@example.com",
                 Phone = "0123456789",
-                CreatedAt = DateTime.UtcNow
+                CreatedAt = now
             });
 
             modelBuilder.Entity<Product>().HasData(new Product
@@ -114,26 +107,27 @@ namespace DepartmentStore.DataAccess
                 Price = 9.99m,
                 CategoryId = catId,
                 SupplierId = suppId,
-                CreatedAt = DateTime.UtcNow
+                CreatedAt = now
             });
 
             modelBuilder.Entity<Inventory>().HasData(new Inventory
             {
-                Id = Guid.NewGuid(),
+                Id = Guid.Parse("44444444-4444-4444-4444-444444444444"),
                 ProductId = prodId,
                 QuantityOnHand = 150,
-                LastRestockDate = DateTime.UtcNow,
-                CreatedAt = DateTime.UtcNow
+                LastRestockDate = now,
+                CreatedAt = now
             });
 
-            // ===== Seed Roles mẫu =====
-            var adminRoleId = Guid.NewGuid();
+            // ===== Static Seed Role =====
+            var adminRoleId = Guid.Parse("55555555-5555-5555-5555-555555555555");
             modelBuilder.Entity<AppRole>().HasData(new AppRole
             {
                 Id = adminRoleId,
-                Name = "ADMIN",
+                Name = "Admin",
                 NormalizedName = "ADMIN",
-                Description = "System Administrator"
+                Description = "System Administrator",
+                CreatedAt = now
             });
         }
     }

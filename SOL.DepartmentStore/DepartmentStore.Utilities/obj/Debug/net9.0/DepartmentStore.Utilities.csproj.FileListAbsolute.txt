@@ -18,3 +18,10 @@ H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.
 H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Utilities\obj\Debug\net9.0\DepartmentStore.Utilities.dll
 H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Utilities\obj\Debug\net9.0\refint\DepartmentStore.Utilities.dll
 H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Utilities\obj\Debug\net9.0\DepartmentStore.Utilities.pdb
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Utilities\bin\Debug\net9.0\DepartmentStore.Utilities.deps.json
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Utilities\bin\Debug\net9.0\DepartmentStore.Utilities.dll
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Utilities\bin\Debug\net9.0\DepartmentStore.Utilities.pdb
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Utilities\bin\Debug\net9.0\DepartmentStore.DataAccess.dll
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Utilities\bin\Debug\net9.0\DepartmentStore.DataAccess.pdb
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Utilities\obj\Debug\net9.0\Departme.052A58FA.Up2Date
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.Utilities\obj\Debug\net9.0\ref\DepartmentStore.Utilities.dll
