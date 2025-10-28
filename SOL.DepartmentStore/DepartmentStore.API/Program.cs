@@ -43,11 +43,15 @@ builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ISupplierService, SupplierService>();
 builder.Services.AddScoped<IInventoryService, InventoryService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IPaymentService, PaymentService>();
+
 
 // builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();   // <-- uncomment if you have a UnitOfWork
 
 // ========================= AUTOMAPPER =========================
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddAutoMapper(typeof(DepartmentStore.Utilities.Helpers.MapperProfile));
+
 
 // ========================= CONTROLLERS + ODATA + JSON =========================
 builder.Services

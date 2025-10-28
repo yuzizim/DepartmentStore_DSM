@@ -38,6 +38,27 @@ namespace DepartmentStore.Utilities.Helpers
             // Inventory
             CreateMap<Inventory, InventoryDto>();
 
+            // ===== Order Mappings =====
+            CreateMap<Order, OrderDto>()
+                .ForMember(dest => dest.CustomerName, opt => opt.MapFrom(src => src.Customer.FullName))
+                .ForMember(dest => dest.EmployeeName, opt => opt.MapFrom(src => src.Employee != null ? src.Employee.FullName : null))
+                .ForMember(dest => dest.Details, opt => opt.MapFrom(src => src.OrderDetails));
+
+            CreateMap<OrderDetail, OrderDetailDto>()
+                .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src => src.Product.Name));
+
+            CreateMap<CreateOrderDto, Order>()
+                .ForMember(dest => dest.TotalAmount, opt => opt.Ignore())
+                .ForMember(dest => dest.OrderDate, opt => opt.MapFrom(_ => DateTime.UtcNow))
+                .ForMember(dest => dest.OrderDetails, opt => opt.Ignore());
+
+            CreateMap<CreateOrderDetailDto, OrderDetail>()
+                .ForMember(dest => dest.UnitPrice, opt => opt.Ignore());
+
+            // ===== Payment Mappings =====
+            CreateMap<Payment, PaymentDto>();
+
+
             // ===== User Mapping =====
             CreateMap<AppUser, UserDto>()
                 .ForMember(dest => dest.Username, opt => opt.MapFrom(src => src.UserName))
