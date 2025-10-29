@@ -1,24 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{2C79D2FF-E0DA-4934-AF25-F811ADAEF42D}|DepartmentStore.API\\DepartmentStore.API.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C79D2FF-E0DA-4934-AF25-F811ADAEF42D}|DepartmentStore.API\\DepartmentStore.API.csproj|solutionrelative:departmentstore.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C79D2FF-E0DA-4934-AF25-F811ADAEF42D}|DepartmentStore.API\\DepartmentStore.API.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.api\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C79D2FF-E0DA-4934-AF25-F811ADAEF42D}|DepartmentStore.API\\DepartmentStore.API.csproj|solutionrelative:departmentstore.api\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25E73A65-EF15-414A-85F2-3E43A5962950}|DepartmentStore.Service\\DepartmentStore.Service.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.service\\implementations\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25E73A65-EF15-414A-85F2-3E43A5962950}|DepartmentStore.Service\\DepartmentStore.Service.csproj|solutionrelative:departmentstore.service\\implementations\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25E73A65-EF15-414A-85F2-3E43A5962950}|DepartmentStore.Service\\DepartmentStore.Service.csproj|h:\\praticecodec#\\prn232\\departmentstore_dsm\\sol.departmentstore\\departmentstore.service\\interfaces\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25E73A65-EF15-414A-85F2-3E43A5962950}|DepartmentStore.Service\\DepartmentStore.Service.csproj|solutionrelative:departmentstore.service\\interfaces\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 138,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -579,58 +562,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.API\\Program.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.API\\Program.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.API\\Program.cs",
-              "RelativeToolTip": "DepartmentStore.API\\Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAQwC8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T16:43:27.048Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PaymentsController.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.API\\Controllers\\PaymentsController.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.API\\Controllers\\PaymentsController.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.API\\Controllers\\PaymentsController.cs",
-              "RelativeToolTip": "DepartmentStore.API\\Controllers\\PaymentsController.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAQwEEAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T16:40:13.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PaymentService.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Service\\Implementations\\PaymentService.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.Service\\Implementations\\PaymentService.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Service\\Implementations\\PaymentService.cs",
-              "RelativeToolTip": "DepartmentStore.Service\\Implementations\\PaymentService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAiwBUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T16:39:35.845Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IPaymentService.cs",
-              "DocumentMoniker": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Service\\Interfaces\\IPaymentService.cs",
-              "RelativeDocumentMoniker": "DepartmentStore.Service\\Interfaces\\IPaymentService.cs",
-              "ToolTip": "H:\\PraticeCodeC#\\PRN232\\DepartmentStore_DSM\\SOL.DepartmentStore\\DepartmentStore.Service\\Interfaces\\IPaymentService.cs",
-              "RelativeToolTip": "DepartmentStore.Service\\Interfaces\\IPaymentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T16:39:10.925Z",
-              "EditorCaption": ""
             }
           ]
         },

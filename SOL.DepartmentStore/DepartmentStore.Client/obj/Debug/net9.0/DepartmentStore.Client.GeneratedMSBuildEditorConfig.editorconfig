@@ -20,16 +20,12 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[H:/PraticeCodeC\#/PRN232/DepartmentStore_DSM/SOL.DepartmentStore/DepartmentStore.Client/Pages/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+[H:/PraticeCodeC\#/PRN232/DepartmentStore_DSM/SOL.DepartmentStore/DepartmentStore.Client/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[H:/PraticeCodeC\#/PRN232/DepartmentStore_DSM/SOL.DepartmentStore/DepartmentStore.Client/Pages/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[H:/PraticeCodeC\#/PRN232/DepartmentStore_DSM/SOL.DepartmentStore/DepartmentStore.Client/Pages/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+[H:/PraticeCodeC\#/PRN232/DepartmentStore_DSM/SOL.DepartmentStore/DepartmentStore.Client/Pages/Shared/_NavMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9OYXZNZW51LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [H:/PraticeCodeC\#/PRN232/DepartmentStore_DSM/SOL.DepartmentStore/DepartmentStore.Client/Pages/Shared/_ValidationScriptsPartial.cshtml]

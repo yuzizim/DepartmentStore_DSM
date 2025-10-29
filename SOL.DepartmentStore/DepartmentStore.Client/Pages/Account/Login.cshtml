@@ -1,0 +1,20 @@
+﻿@page
+@model DepartmentStore.Client.Pages.Account.LoginModel
+@{
+    Layout = "_Layout";
+}
+<div class="container mt-5">
+    <h2>Đăng nhập hệ thống DSM</h2>
+    <form method="post">
+        <div class="form-group">
+            <label>Email</label>
+            <input asp-for="LoginRequest.Email" class="form-control" />
+        </div>
+        <div class="form-group mt-2">
+            <label>Password</label>
+            <input asp-for="LoginRequest.Password" class="form-control" type="password" />
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Login</button>
+        <p class="text-danger mt-2">@Model.ErrorMessage</p>
+    </form>
+</div>
