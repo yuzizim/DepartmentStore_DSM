@@ -10,32 +10,36 @@ namespace DepartmentStore.Utilities.Helpers
     {
         public MapperProfile()
         {
-            // Product mappings
+            // ===== Customer Mappings =====
+            CreateMap<Customer, CustomerDto>();
+            CreateMap<CreateCustomerDto, Customer>();
+            CreateMap<UpdateCustomerDto, Customer>()
+                .ForAllMembers(opt => opt.Condition((src, dest, srcMember) => srcMember != null));
+
+            // ===== Product Mappings =====
             CreateMap<Product, ProductDto>()
                 .ForMember(d => d.QuantityOnHand, opt => opt.MapFrom(src => src.Inventory != null ? src.Inventory.QuantityOnHand : 0))
                 .ForMember(d => d.CategoryName, opt => opt.MapFrom(src => src.Category != null ? src.Category.Name : null))
                 .ForMember(d => d.SupplierName, opt => opt.MapFrom(src => src.Supplier != null ? src.Supplier.Name : null));
-
             CreateMap<CreateProductDto, Product>()
                 .ForMember(d => d.Id, opt => opt.Ignore())
                 .ForMember(d => d.CreatedAt, opt => opt.Ignore());
-
             CreateMap<UpdateProductDto, Product>()
                 .ForAllMembers(opt => opt.Condition((src, dest, srcMember) => srcMember != null));
 
-            // Category
+            // ===== Category Mappings =====
             CreateMap<Category, CategoryDto>();
             CreateMap<CreateCategoryDto, Category>();
             CreateMap<UpdateCategoryDto, Category>()
                 .ForAllMembers(opt => opt.Condition((src, dest, srcMember) => srcMember != null));
 
-            // Supplier
+            // ===== Supplier Mappings =====
             CreateMap<Supplier, SupplierDto>();
             CreateMap<CreateSupplierDto, Supplier>();
             CreateMap<UpdateSupplierDto, Supplier>()
                 .ForAllMembers(opt => opt.Condition((src, dest, srcMember) => srcMember != null));
 
-            // Inventory
+            // ===== Inventory Mapping =====
             CreateMap<Inventory, InventoryDto>();
 
             // ===== Order Mappings =====
@@ -43,21 +47,17 @@ namespace DepartmentStore.Utilities.Helpers
                 .ForMember(dest => dest.CustomerName, opt => opt.MapFrom(src => src.Customer.FullName))
                 .ForMember(dest => dest.EmployeeName, opt => opt.MapFrom(src => src.Employee != null ? src.Employee.FullName : null))
                 .ForMember(dest => dest.Details, opt => opt.MapFrom(src => src.OrderDetails));
-
             CreateMap<OrderDetail, OrderDetailDto>()
                 .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src => src.Product.Name));
-
             CreateMap<CreateOrderDto, Order>()
                 .ForMember(dest => dest.TotalAmount, opt => opt.Ignore())
                 .ForMember(dest => dest.OrderDate, opt => opt.MapFrom(_ => DateTime.UtcNow))
                 .ForMember(dest => dest.OrderDetails, opt => opt.Ignore());
-
             CreateMap<CreateOrderDetailDto, OrderDetail>()
                 .ForMember(dest => dest.UnitPrice, opt => opt.Ignore());
 
-            // ===== Payment Mappings =====
+            // ===== Payment Mapping =====
             CreateMap<Payment, PaymentDto>();
-
 
             // ===== User Mapping =====
             CreateMap<AppUser, UserDto>()

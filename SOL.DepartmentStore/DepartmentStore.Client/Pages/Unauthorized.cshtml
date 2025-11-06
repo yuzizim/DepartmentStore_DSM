@@ -1,0 +1,11 @@
+﻿@page
+@model Microsoft.AspNetCore.Mvc.RazorPages.PageModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Unauthorized";
+}
+<div class="text-center mt-5">
+    <h3 class="text-danger">Bạn không có quyền truy cập trang này.</h3>
+    <p>Vui lòng đăng nhập bằng tài khoản có quyền phù hợp.</p>
+    <a class="btn btn-primary" asp-page="/Account/Login">Đăng nhập</a>
+</div>

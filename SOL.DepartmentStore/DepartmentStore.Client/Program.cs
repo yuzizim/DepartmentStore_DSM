@@ -1,39 +1,39 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Http;
-using DepartmentStore.Client.Services;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Services
 builder.Services.AddRazorPages();
-
-// Cookie Authentication (để lưu token)
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(options =>
-    {
-        options.LoginPath = "/Account/Login";
-        options.LogoutPath = "/Account/Logout";
-    });
-
-// Register HttpClient cho API
-builder.Services.AddHttpClient<ApiClient>(client =>
+builder.Services.AddHttpClient();       // for API calls
+builder.Services.AddSession(options =>
 {
-    client.BaseAddress = new Uri("https://localhost:7153/api/"); // API base URL
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
 });
-
-// Register custom services
-builder.Services.AddScoped<AuthService>();
-//builder.Services.AddScoped<ProductService>();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
+    app.UseHsts();
 }
 
+app.UseHttpsRedirection();
 app.UseStaticFiles();
+
 app.UseRouting();
-app.UseAuthentication();
-app.UseAuthorization();
+app.UseSession();
+
+app.MapGet("/", context =>
+{
+    context.Response.Redirect("/Account/Login");
+    return Task.CompletedTask;
+});
 
 app.MapRazorPages();
 app.Run();

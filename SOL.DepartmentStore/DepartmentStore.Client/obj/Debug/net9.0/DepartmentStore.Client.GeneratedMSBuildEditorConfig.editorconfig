@@ -24,12 +24,24 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[H:/PraticeCodeC\#/PRN232/DepartmentStore_DSM/SOL.DepartmentStore/DepartmentStore.Client/Pages/Shared/_NavMenu.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9OYXZNZW51LmNzaHRtbA==
+[H:/PraticeCodeC\#/PRN232/DepartmentStore_DSM/SOL.DepartmentStore/DepartmentStore.Client/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[H:/PraticeCodeC\#/PRN232/DepartmentStore_DSM/SOL.DepartmentStore/DepartmentStore.Client/Pages/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[H:/PraticeCodeC\#/PRN232/DepartmentStore_DSM/SOL.DepartmentStore/DepartmentStore.Client/Pages/Dashboard/Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXEFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/PraticeCodeC\#/PRN232/DepartmentStore_DSM/SOL.DepartmentStore/DepartmentStore.Client/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/PraticeCodeC\#/PRN232/DepartmentStore_DSM/SOL.DepartmentStore/DepartmentStore.Client/Pages/Shared/_LayoutDashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXREYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/PraticeCodeC\#/PRN232/DepartmentStore_DSM/SOL.DepartmentStore/DepartmentStore.Client/Pages/Unauthorized.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVW5hdXRob3JpemVkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [H:/PraticeCodeC\#/PRN232/DepartmentStore_DSM/SOL.DepartmentStore/DepartmentStore.Client/Pages/_ViewImports.cshtml]
