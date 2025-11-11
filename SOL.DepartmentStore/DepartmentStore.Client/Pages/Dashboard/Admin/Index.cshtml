@@ -1,0 +1,39 @@
+﻿@page
+@model DepartmentStore.Client.Pages.Dashboard.Admin.IndexModel
+@{
+    ViewData["Title"] = "Admin Dashboard";
+    Layout = "/Pages/Shared/_LayoutDashboard.cshtml";
+}
+
+<div class="row g-4">
+    <div class="col-md-3">
+        <div class="card text-center p-3">
+            <h6>Users</h6>
+            <h3>@Model.Stats.UserCount</h3>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-center p-3">
+            <h6>Products</h6>
+            <h3>@Model.Stats.ProductCount</h3>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-center p-3">
+            <h6>Orders</h6>
+            <h3>@Model.Stats.OrderCount</h3>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-center p-3">
+            <h6>Payments</h6>
+            <h3>@Model.Stats.PaymentCount</h3>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        console.log("Admin Dashboard loaded");
+    </script>
+}

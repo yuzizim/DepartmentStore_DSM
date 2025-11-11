@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using DepartmentStore.DataAccess;
 using DepartmentStore.DataAccess.Entities;
-using DepartmentStore.Entities;
 using DepartmentStore.Service.Interfaces;
 using DepartmentStore.Utilities.DTOs.Auth;
 using Microsoft.AspNetCore.Identity;

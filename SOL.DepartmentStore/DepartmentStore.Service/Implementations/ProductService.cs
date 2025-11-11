@@ -1,100 +1,119 @@
 ﻿using AutoMapper;
-using DepartmentStore.DataAccess;
 using DepartmentStore.DataAccess.Entities;
-using DepartmentStore.Entities;
+using DepartmentStore.DataAccess.Repositories;
 using DepartmentStore.Service.Interfaces;
 using DepartmentStore.Utilities.DTOs;
-using Microsoft.EntityFrameworkCore;
 
 namespace DepartmentStore.Service.Implementations
 {
     public class ProductService : IProductService
     {
-        private readonly AppDbContext _db;
+        private readonly IBaseRepository<OrderDetail> _orderDetailRepo;
+        private readonly IBaseRepository<Product> _productRepo;
+        private readonly IBaseRepository<Inventory> _inventoryRepo;
+        private readonly IBaseRepository<Category> _categoryRepo;
+        private readonly IBaseRepository<Supplier> _supplierRepo;
         private readonly IMapper _mapper;
 
-        public ProductService(AppDbContext db, IMapper mapper)
+        public ProductService(
+            IBaseRepository<Product> productRepo,
+            IBaseRepository<Inventory> inventoryRepo,
+            IBaseRepository<Category> categoryRepo,
+            IBaseRepository<Supplier> supplierRepo,
+            IMapper mapper)
         {
-            _db = db;
+            _productRepo = productRepo;
+            _inventoryRepo = inventoryRepo;
+            _categoryRepo = categoryRepo;
+            _supplierRepo = supplierRepo;
             _mapper = mapper;
         }
 
         public async Task<IEnumerable<ProductDto>> GetAllAsync()
         {
-            var products = await _db.Products
-                .Include(p => p.Category)
-                .Include(p => p.Supplier)
-                .Include(p => p.Inventory)
-                .AsNoTracking()
-                .ToListAsync();
+            var products = await _productRepo.GetAllWithIncludeAsync(
+                p => p.Category!,
+                p => p.Supplier!,
+                p => p.Inventory!
+            );
             return _mapper.Map<IEnumerable<ProductDto>>(products);
         }
 
         public async Task<ProductDto?> GetByIdAsync(Guid id)
         {
-            var p = await _db.Products
-                .Include(x => x.Category)
-                .Include(x => x.Supplier)
-                .Include(x => x.Inventory)
-                .FirstOrDefaultAsync(x => x.Id == id);
-            return p == null ? null : _mapper.Map<ProductDto>(p);
+            var product = await _productRepo.GetByIdWithIncludeAsync(id,
+                p => p.Category!,
+                p => p.Supplier!,
+                p => p.Inventory!
+            );
+            return product == null ? null : _mapper.Map<ProductDto>(product);
         }
 
         public async Task<ProductDto> CreateAsync(CreateProductDto dto)
         {
-            // ensure category & supplier exist
-            var cat = await _db.Categories.FindAsync(dto.CategoryId) ?? throw new KeyNotFoundException("Category not found");
-            var sup = await _db.Suppliers.FindAsync(dto.SupplierId) ?? throw new KeyNotFoundException("Supplier not found");
+            var category = await _categoryRepo.GetByIdAsync(dto.CategoryId)
+                ?? throw new KeyNotFoundException("Category not found");
+            var supplier = await _supplierRepo.GetByIdAsync(dto.SupplierId)
+                ?? throw new KeyNotFoundException("Supplier not found");
 
-            var entity = _mapper.Map<Product>(dto);
-            entity.Id = Guid.NewGuid();
-            entity.CreatedAt = DateTime.UtcNow;
+            var product = _mapper.Map<Product>(dto);
+            product.Id = Guid.NewGuid();
+            product.CreatedAt = DateTime.UtcNow;
 
-            _db.Products.Add(entity);
+            await _productRepo.AddAsync(product);
+            await _productRepo.SaveChangesAsync();
 
-            // create inventory
-            var inv = new Inventory
+            var inventory = new Inventory
             {
                 Id = Guid.NewGuid(),
-                ProductId = entity.Id,
+                ProductId = product.Id,
                 QuantityOnHand = dto.InitialQuantity,
                 ReorderLevel = 10,
                 LastRestockDate = DateTime.UtcNow,
                 CreatedAt = DateTime.UtcNow
             };
-            _db.Inventories.Add(inv);
+            await _inventoryRepo.AddAsync(inventory);
+            await _inventoryRepo.SaveChangesAsync();
 
-            await _db.SaveChangesAsync();
+            var created = await _productRepo.GetByIdWithIncludeAsync(product.Id,
+                p => p.Category!,
+                p => p.Supplier!,
+                p => p.Inventory!
+            );
 
-            // reload with nav props
-            var created = await _db.Products.Include(p => p.Category).Include(p => p.Supplier).Include(p => p.Inventory)
-                                           .FirstOrDefaultAsync(p => p.Id == entity.Id);
             return _mapper.Map<ProductDto>(created!);
         }
 
         public async Task<ProductDto> UpdateAsync(Guid id, UpdateProductDto dto)
         {
-            var existing = await _db.Products.FindAsync(id) ?? throw new KeyNotFoundException("Product not found");
+            var product = await _productRepo.GetByIdAsync(id)
+                ?? throw new KeyNotFoundException("Product not found");
 
-            _mapper.Map(dto, existing);
-            existing.UpdatedAt = DateTime.UtcNow;
-            _db.Products.Update(existing);
-            await _db.SaveChangesAsync();
+            _mapper.Map(dto, product);
+            product.UpdatedAt = DateTime.UtcNow;
 
-            var updated = await _db.Products.Include(p => p.Category).Include(p => p.Supplier).Include(p => p.Inventory)
-                                           .FirstOrDefaultAsync(p => p.Id == id);
+            _productRepo.Update(product);
+            await _productRepo.SaveChangesAsync();
+
+            var updated = await _productRepo.GetByIdWithIncludeAsync(id,
+                p => p.Category!,
+                p => p.Supplier!,
+                p => p.Inventory!
+            );
 
             return _mapper.Map<ProductDto>(updated!);
         }
 
         public async Task<bool> DeleteAsync(Guid id)
         {
-            var existing = await _db.Products.FindAsync(id);
-            if (existing == null) return false;
+            var product = await _productRepo.GetByIdWithIncludeAsync(id, p => p.OrderDetails!);
+            if (product == null) return false;
 
-            // optionally check constraints: if has order details -> forbid? For now restrict delete
-            _db.Products.Remove(existing);
-            await _db.SaveChangesAsync();
+            if (product.OrderDetails.Any())
+                throw new InvalidOperationException("Cannot delete product with existing orders");
+
+            _productRepo.Remove(product); // Soft Delete
+            await _productRepo.SaveChangesAsync();
             return true;
         }
     }

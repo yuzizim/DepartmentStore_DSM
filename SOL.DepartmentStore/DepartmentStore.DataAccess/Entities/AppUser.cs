@@ -1,9 +1,7 @@
-﻿using DepartmentStore.DataAccess.Entities;
-using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DepartmentStore.Entities
+namespace DepartmentStore.DataAccess.Entities
 {
     public class AppUser : IdentityUser<Guid>
     {
@@ -12,12 +10,11 @@ namespace DepartmentStore.Entities
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedAt { get; set; }
 
+        [ForeignKey(nameof(Employee))]
         public Guid? EmployeeId { get; set; }
+        public Employee? Employee { get; set; }
 
-        // Quan hệ 1-n với RefreshToken
-        public ICollection<RefreshToken>? RefreshTokens { get; set; }
-
-        // Quan hệ 1-n (nếu user cũng là Customer)
-        public ICollection<Order>? Orders { get; set; }
+        public ICollection<RefreshToken> RefreshTokens { get; set; } = null;
+        public ICollection<Order> Orders { get; set; } = null;
     }
 }

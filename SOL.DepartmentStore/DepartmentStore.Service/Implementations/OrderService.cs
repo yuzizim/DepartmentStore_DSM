@@ -1,52 +1,69 @@
 ﻿using AutoMapper;
 using DepartmentStore.DataAccess;
-using DepartmentStore.Entities;
+using DepartmentStore.DataAccess.Entities;
+using DepartmentStore.DataAccess.Repositories;
 using DepartmentStore.Service.Interfaces;
 using DepartmentStore.Utilities.DTOs;
 using Microsoft.EntityFrameworkCore;
-using System.Transactions;
 
 namespace DepartmentStore.Service.Implementations
 {
     public class OrderService : IOrderService
     {
-        private readonly AppDbContext _db;
+        private readonly IBaseRepository<Order> _orderRepo;
+        private readonly IBaseRepository<OrderDetail> _detailRepo;
+        private readonly IBaseRepository<Payment> _paymentRepo;
+        private readonly IBaseRepository<Product> _productRepo;
+        private readonly IBaseRepository<Inventory> _inventoryRepo;
+        private readonly IBaseRepository<Customer> _customerRepo;
         private readonly IMapper _mapper;
+        private readonly AppDbContext _db;
 
-        public OrderService(AppDbContext db, IMapper mapper)
+        public OrderService(
+            IBaseRepository<Order> orderRepo,
+            IBaseRepository<OrderDetail> detailRepo,
+            IBaseRepository<Payment> paymentRepo,
+            IBaseRepository<Product> productRepo,
+            IBaseRepository<Inventory> inventoryRepo,
+            IBaseRepository<Customer> customerRepo,
+            IMapper mapper,
+            AppDbContext db)
         {
-            _db = db;
+            _orderRepo = orderRepo;
+            _detailRepo = detailRepo;
+            _paymentRepo = paymentRepo;
+            _productRepo = productRepo;
+            _inventoryRepo = inventoryRepo;
+            _customerRepo = customerRepo;
             _mapper = mapper;
+            _db = db;
         }
-
         public async Task<IEnumerable<OrderDto>> GetAllAsync()
         {
-            var list = await _db.Orders
-                .Include(o => o.Customer)
-                .Include(o => o.Employee)
-                .Include(o => o.OrderDetails).ThenInclude(d => d.Product)
-                .AsNoTracking()
-                .ToListAsync();
-            return _mapper.Map<IEnumerable<OrderDto>>(list);
+            var orders = await _orderRepo.GetAllWithIncludeAsync(
+                o => o.Customer!,
+                o => o.Employee!,
+                o => o.OrderDetails!
+            );
+            return _mapper.Map<IEnumerable<OrderDto>>(orders);
         }
 
         public async Task<OrderDto?> GetByIdAsync(Guid id)
         {
-            var o = await _db.Orders
-                .Include(o => o.Customer)
-                .Include(o => o.Employee)
-                .Include(o => o.OrderDetails).ThenInclude(d => d.Product)
-                .FirstOrDefaultAsync(x => x.Id == id);
-            return o == null ? null : _mapper.Map<OrderDto>(o);
+            var order = await _orderRepo.GetByIdWithIncludeAsync(id,
+                o => o.Customer!,
+                o => o.Employee!,
+                o => o.OrderDetails!
+            );
+            return order == null ? null : _mapper.Map<OrderDto>(order);
         }
 
         public async Task<OrderDto> CreateAsync(CreateOrderDto dto, Guid employeeId)
         {
             using var transaction = await _db.Database.BeginTransactionAsync();
-
             try
             {
-                var customer = await _db.Customers.FindAsync(dto.CustomerId)
+                var customer = await _customerRepo.GetByIdAsync(dto.CustomerId)
                     ?? throw new KeyNotFoundException("Customer not found");
 
                 var order = new Order
@@ -55,21 +72,24 @@ namespace DepartmentStore.Service.Implementations
                     CustomerId = customer.Id,
                     EmployeeId = employeeId,
                     OrderDate = DateTime.UtcNow,
-                    Status = OrderStatus.Confirmed
+                    Status = OrderStatus.Confirmed,
+                    CreatedAt = DateTime.UtcNow
                 };
-                _db.Orders.Add(order);
+
+                await _orderRepo.AddAsync(order);
+                await _orderRepo.SaveChangesAsync();
 
                 decimal total = 0;
                 foreach (var item in dto.OrderDetails)
                 {
-                    var product = await _db.Products.Include(p => p.Inventory)
-                        .FirstOrDefaultAsync(p => p.Id == item.ProductId)
+                    var product = await _productRepo.GetByIdWithIncludeAsync(item.ProductId, p => p.Inventory!)
                         ?? throw new KeyNotFoundException($"Product {item.ProductId} not found");
 
-                    if (product.Inventory == null || product.Inventory.QuantityOnHand < item.Quantity)
+                    if (product.Inventory!.QuantityOnHand < item.Quantity)
                         throw new InvalidOperationException($"Not enough stock for {product.Name}");
 
                     product.Inventory.QuantityOnHand -= item.Quantity;
+                    _inventoryRepo.Update(product.Inventory);
 
                     var detail = new OrderDetail
                     {
@@ -77,13 +97,16 @@ namespace DepartmentStore.Service.Implementations
                         OrderId = order.Id,
                         ProductId = product.Id,
                         Quantity = item.Quantity,
-                        UnitPrice = product.Price
+                        UnitPrice = product.Price,
+                        CreatedAt = DateTime.UtcNow
                     };
-                    _db.OrderDetails.Add(detail);
+                    await _detailRepo.AddAsync(detail);
+
                     total += product.Price * item.Quantity;
                 }
 
                 order.TotalAmount = total;
+                _orderRepo.Update(order);
 
                 var payment = new Payment
                 {
@@ -95,15 +118,15 @@ namespace DepartmentStore.Service.Implementations
                     Status = "Completed",
                     CreatedAt = DateTime.UtcNow
                 };
-                _db.Payments.Add(payment);
+                await _paymentRepo.AddAsync(payment);
 
-                await _db.SaveChangesAsync();
+                await _orderRepo.SaveChangesAsync();
                 await transaction.CommitAsync();
 
-                var created = await _db.Orders
-                    .Include(o => o.Customer)
-                    .Include(o => o.OrderDetails).ThenInclude(d => d.Product)
-                    .FirstOrDefaultAsync(o => o.Id == order.Id);
+                var created = await _orderRepo.GetByIdWithIncludeAsync(order.Id,
+                    o => o.Customer!,
+                    o => o.OrderDetails!
+                );
 
                 return _mapper.Map<OrderDto>(created!);
             }
@@ -116,16 +139,18 @@ namespace DepartmentStore.Service.Implementations
 
         public async Task<OrderDto> UpdateStatusAsync(Guid id, string newStatus)
         {
-            var order = await _db.Orders.FindAsync(id)
+            var order = await _orderRepo.GetByIdAsync(id)
                 ?? throw new KeyNotFoundException("Order not found");
 
-            if (!Enum.TryParse<OrderStatus>(newStatus, out var status))
-                throw new ArgumentException("Invalid status");
+            if (!Enum.TryParse<OrderStatus>(newStatus, true, out var status))
+                throw new ArgumentException("Invalid status value");
 
             order.Status = status;
             order.UpdatedAt = DateTime.UtcNow;
-            _db.Orders.Update(order);
-            await _db.SaveChangesAsync();
+
+            _orderRepo.Update(order);
+            await _orderRepo.SaveChangesAsync();
+
             return _mapper.Map<OrderDto>(order);
         }
     }

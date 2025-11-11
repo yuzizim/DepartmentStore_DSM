@@ -1,18 +1,16 @@
-﻿using DepartmentStore.DataAccess.Entities;
-using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DepartmentStore.Entities
+namespace DepartmentStore.DataAccess.Entities
 {
     public class Payment : BaseEntity
     {
-        [ForeignKey("Order")]
+        [ForeignKey(nameof(Order))]
         public Guid OrderId { get; set; }
         public Order? Order { get; set; }
 
         [Required]
-        public string PaymentMethod { get; set; } = "Cash"; // or CreditCard, QR, etc.
+        public string PaymentMethod { get; set; } = "Cash";
 
         public decimal Amount { get; set; }
         public DateTime PaymentDate { get; set; } = DateTime.UtcNow;

@@ -1,4 +1,5 @@
 ﻿using DepartmentStore.Service.Interfaces;
+using DepartmentStore.Utilities.DTOs;
 using DepartmentStore.Utilities.DTOs.Auth;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -33,11 +34,13 @@ namespace DepartmentStore.API.Controllers
             return StatusCode(201, "User registered successfully.");
         }
 
+        // src/DepartmentStore.API/Controllers/AuthController.cs
+
         [HttpPost("refresh")]
         [AllowAnonymous]
-        public async Task<IActionResult> RefreshToken([FromBody] string refreshToken)
+        public async Task<IActionResult> Refresh([FromBody] RefreshTokenRequestDto request)
         {
-            var result = await _authService.RefreshTokenAsync(refreshToken);
+            var result = await _authService.RefreshTokenAsync(request.RefreshToken);
             return Ok(result);
         }
 
@@ -47,7 +50,7 @@ namespace DepartmentStore.API.Controllers
         {
             var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
             await _authService.LogoutAsync(userId);
-            return Ok("Logged out successfully (refresh tokens revoked).");
+            return Ok(new { message = "Logged out successfully." });
         }
 
         [HttpGet("users")]

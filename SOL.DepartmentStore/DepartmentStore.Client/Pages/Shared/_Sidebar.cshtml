@@ -1,0 +1,21 @@
+﻿@model Func<string, bool>
+
+<nav class="nav flex-column">
+    <a class="nav-link mb-2 @(Model("Admin") ? "" : "d-none")" asp-page="/Dashboard/Admin/Index">
+        <i class="bi bi-speedometer2"></i> Admin Dashboard
+    </a>
+    <a class="nav-link mb-2 @(Model("Manager") ? "" : "d-none")" asp-page="/Dashboard/Manager/Index">
+        <i class="bi bi-person-badge"></i> Manager Dashboard
+    </a>
+    <a class="nav-link mb-2 @(Model("InventoryEmployee") ? "" : "d-none")" asp-page="/Dashboard/Inventory/Index">
+        <i class="bi bi-archive"></i> Inventory
+    </a>
+    <a class="nav-link mb-2 @(Model("SalesEmployee") ? "" : "d-none")" asp-page="/Dashboard/Sales/Index">
+        <i class="bi bi-cart"></i> Sales
+    </a>
+
+    <hr class="text-white-50" />
+
+    <a class="nav-link mb-2" asp-page="/Products/Index"><i class="bi bi-box-seam"></i> Products</a>
+    <a class="nav-link mb-2" asp-page="/Orders/Index"><i class="bi bi-receipt"></i> Orders</a>
+</nav>

@@ -22,97 +22,7 @@ namespace DepartmentStore.DataAccess.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
-            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.Product", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("char(36)");
-
-                    b.Property<Guid>("CategoryId")
-                        .HasColumnType("char(36)");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("longtext");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("varchar(150)");
-
-                    b.Property<decimal>("Price")
-                        .HasPrecision(18, 2)
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<Guid>("SupplierId")
-                        .HasColumnType("char(36)");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
-
-                    b.HasIndex("SupplierId");
-
-                    b.ToTable("Products");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("33333333-3333-3333-3333-333333333333"),
-                            CategoryId = new Guid("11111111-1111-1111-1111-111111111111"),
-                            CreatedAt = new DateTime(2025, 1, 1, 7, 0, 0, 0, DateTimeKind.Local),
-                            Description = "Demo Product",
-                            IsDeleted = false,
-                            Name = "Sample Item",
-                            Price = 9.99m,
-                            SupplierId = new Guid("22222222-2222-2222-2222-222222222222")
-                        });
-                });
-
-            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.RefreshToken", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("char(36)");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<DateTime>("Expires")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<bool>("IsRevoked")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<string>("Token")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("char(36)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("RefreshTokens");
-                });
-
-            modelBuilder.Entity("DepartmentStore.Entities.AppRole", b =>
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.AppRole", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -149,13 +59,13 @@ namespace DepartmentStore.DataAccess.Migrations
                         {
                             Id = new Guid("55555555-5555-5555-5555-555555555555"),
                             CreatedAt = new DateTime(2025, 1, 1, 7, 0, 0, 0, DateTimeKind.Local),
-                            Description = "System Administrator",
+                            Description = "System Administrator with full access",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
                 });
 
-            modelBuilder.Entity("DepartmentStore.Entities.AppUser", b =>
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.AppUser", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -225,6 +135,8 @@ namespace DepartmentStore.DataAccess.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("EmployeeId");
+
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
 
@@ -235,7 +147,7 @@ namespace DepartmentStore.DataAccess.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("DepartmentStore.Entities.Category", b =>
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.Category", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -267,13 +179,13 @@ namespace DepartmentStore.DataAccess.Migrations
                         {
                             Id = new Guid("11111111-1111-1111-1111-111111111111"),
                             CreatedAt = new DateTime(2025, 1, 1, 7, 0, 0, 0, DateTimeKind.Local),
-                            Description = "Default category",
+                            Description = "Default category for uncategorized products",
                             IsDeleted = false,
                             Name = "General"
                         });
                 });
 
-            modelBuilder.Entity("DepartmentStore.Entities.Customer", b =>
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.Customer", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -307,7 +219,7 @@ namespace DepartmentStore.DataAccess.Migrations
                     b.ToTable("Customers");
                 });
 
-            modelBuilder.Entity("DepartmentStore.Entities.Employee", b =>
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.Employee", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -345,7 +257,7 @@ namespace DepartmentStore.DataAccess.Migrations
                     b.ToTable("Employees");
                 });
 
-            modelBuilder.Entity("DepartmentStore.Entities.Inventory", b =>
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.Inventory", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -392,7 +304,7 @@ namespace DepartmentStore.DataAccess.Migrations
                         });
                 });
 
-            modelBuilder.Entity("DepartmentStore.Entities.Order", b =>
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.Order", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -437,7 +349,7 @@ namespace DepartmentStore.DataAccess.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("DepartmentStore.Entities.OrderDetail", b =>
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.OrderDetail", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -474,7 +386,7 @@ namespace DepartmentStore.DataAccess.Migrations
                     b.ToTable("OrderDetails");
                 });
 
-            modelBuilder.Entity("DepartmentStore.Entities.Payment", b =>
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.Payment", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -514,7 +426,97 @@ namespace DepartmentStore.DataAccess.Migrations
                     b.ToTable("Payments");
                 });
 
-            modelBuilder.Entity("DepartmentStore.Entities.Supplier", b =>
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.Product", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("CategoryId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("varchar(150)");
+
+                    b.Property<decimal>("Price")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<Guid>("SupplierId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("SupplierId");
+
+                    b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("33333333-3333-3333-3333-333333333333"),
+                            CategoryId = new Guid("11111111-1111-1111-1111-111111111111"),
+                            CreatedAt = new DateTime(2025, 1, 1, 7, 0, 0, 0, DateTimeKind.Local),
+                            Description = "This is a demo product for testing",
+                            IsDeleted = false,
+                            Name = "Sample Product",
+                            Price = 99.99m,
+                            SupplierId = new Guid("22222222-2222-2222-2222-222222222222")
+                        });
+                });
+
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.RefreshToken", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("Expires")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<bool>("IsRevoked")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("char(36)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("RefreshTokens");
+                });
+
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.Supplier", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -551,6 +553,7 @@ namespace DepartmentStore.DataAccess.Migrations
                         new
                         {
                             Id = new Guid("22222222-2222-2222-2222-222222222222"),
+                            Address = "123 Default St, Hanoi, Vietnam",
                             CreatedAt = new DateTime(2025, 1, 1, 7, 0, 0, 0, DateTimeKind.Local),
                             Email = "supplier@example.com",
                             IsDeleted = false,
@@ -662,15 +665,87 @@ namespace DepartmentStore.DataAccess.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.AppUser", b =>
+                {
+                    b.HasOne("DepartmentStore.DataAccess.Entities.Employee", "Employee")
+                        .WithMany()
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("Employee");
+                });
+
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.Inventory", b =>
+                {
+                    b.HasOne("DepartmentStore.DataAccess.Entities.Product", "Product")
+                        .WithOne("Inventory")
+                        .HasForeignKey("DepartmentStore.DataAccess.Entities.Inventory", "ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.Order", b =>
+                {
+                    b.HasOne("DepartmentStore.DataAccess.Entities.AppUser", null)
+                        .WithMany("Orders")
+                        .HasForeignKey("AppUserId");
+
+                    b.HasOne("DepartmentStore.DataAccess.Entities.Customer", "Customer")
+                        .WithMany("Orders")
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DepartmentStore.DataAccess.Entities.Employee", "Employee")
+                        .WithMany()
+                        .HasForeignKey("EmployeeId");
+
+                    b.Navigation("Customer");
+
+                    b.Navigation("Employee");
+                });
+
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.OrderDetail", b =>
+                {
+                    b.HasOne("DepartmentStore.DataAccess.Entities.Order", "Order")
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DepartmentStore.DataAccess.Entities.Product", "Product")
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.Payment", b =>
+                {
+                    b.HasOne("DepartmentStore.DataAccess.Entities.Order", "Order")
+                        .WithOne("Payment")
+                        .HasForeignKey("DepartmentStore.DataAccess.Entities.Payment", "OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+                });
+
             modelBuilder.Entity("DepartmentStore.DataAccess.Entities.Product", b =>
                 {
-                    b.HasOne("DepartmentStore.Entities.Category", "Category")
+                    b.HasOne("DepartmentStore.DataAccess.Entities.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("DepartmentStore.Entities.Supplier", "Supplier")
+                    b.HasOne("DepartmentStore.DataAccess.Entities.Supplier", "Supplier")
                         .WithMany("Products")
                         .HasForeignKey("SupplierId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -683,7 +758,7 @@ namespace DepartmentStore.DataAccess.Migrations
 
             modelBuilder.Entity("DepartmentStore.DataAccess.Entities.RefreshToken", b =>
                 {
-                    b.HasOne("DepartmentStore.Entities.AppUser", "User")
+                    b.HasOne("DepartmentStore.DataAccess.Entities.AppUser", "User")
                         .WithMany("RefreshTokens")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -692,71 +767,9 @@ namespace DepartmentStore.DataAccess.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("DepartmentStore.Entities.Inventory", b =>
-                {
-                    b.HasOne("DepartmentStore.DataAccess.Entities.Product", "Product")
-                        .WithOne("Inventory")
-                        .HasForeignKey("DepartmentStore.Entities.Inventory", "ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("DepartmentStore.Entities.Order", b =>
-                {
-                    b.HasOne("DepartmentStore.Entities.AppUser", null)
-                        .WithMany("Orders")
-                        .HasForeignKey("AppUserId");
-
-                    b.HasOne("DepartmentStore.Entities.Customer", "Customer")
-                        .WithMany("Orders")
-                        .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DepartmentStore.Entities.Employee", "Employee")
-                        .WithMany()
-                        .HasForeignKey("EmployeeId");
-
-                    b.Navigation("Customer");
-
-                    b.Navigation("Employee");
-                });
-
-            modelBuilder.Entity("DepartmentStore.Entities.OrderDetail", b =>
-                {
-                    b.HasOne("DepartmentStore.Entities.Order", "Order")
-                        .WithMany("OrderDetails")
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DepartmentStore.DataAccess.Entities.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Order");
-
-                    b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("DepartmentStore.Entities.Payment", b =>
-                {
-                    b.HasOne("DepartmentStore.Entities.Order", "Order")
-                        .WithOne("Payment")
-                        .HasForeignKey("DepartmentStore.Entities.Payment", "OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Order");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
                 {
-                    b.HasOne("DepartmentStore.Entities.AppRole", null)
+                    b.HasOne("DepartmentStore.DataAccess.Entities.AppRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -765,7 +778,7 @@ namespace DepartmentStore.DataAccess.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<System.Guid>", b =>
                 {
-                    b.HasOne("DepartmentStore.Entities.AppUser", null)
+                    b.HasOne("DepartmentStore.DataAccess.Entities.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -774,7 +787,7 @@ namespace DepartmentStore.DataAccess.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<System.Guid>", b =>
                 {
-                    b.HasOne("DepartmentStore.Entities.AppUser", null)
+                    b.HasOne("DepartmentStore.DataAccess.Entities.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -783,13 +796,13 @@ namespace DepartmentStore.DataAccess.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<System.Guid>", b =>
                 {
-                    b.HasOne("DepartmentStore.Entities.AppRole", null)
+                    b.HasOne("DepartmentStore.DataAccess.Entities.AppRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DepartmentStore.Entities.AppUser", null)
+                    b.HasOne("DepartmentStore.DataAccess.Entities.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -798,43 +811,45 @@ namespace DepartmentStore.DataAccess.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Guid>", b =>
                 {
-                    b.HasOne("DepartmentStore.Entities.AppUser", null)
+                    b.HasOne("DepartmentStore.DataAccess.Entities.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.Product", b =>
-                {
-                    b.Navigation("Inventory");
-                });
-
-            modelBuilder.Entity("DepartmentStore.Entities.AppUser", b =>
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.AppUser", b =>
                 {
                     b.Navigation("Orders");
 
                     b.Navigation("RefreshTokens");
                 });
 
-            modelBuilder.Entity("DepartmentStore.Entities.Category", b =>
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.Category", b =>
                 {
                     b.Navigation("Products");
                 });
 
-            modelBuilder.Entity("DepartmentStore.Entities.Customer", b =>
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.Customer", b =>
                 {
                     b.Navigation("Orders");
                 });
 
-            modelBuilder.Entity("DepartmentStore.Entities.Order", b =>
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.Order", b =>
                 {
                     b.Navigation("OrderDetails");
 
                     b.Navigation("Payment");
                 });
 
-            modelBuilder.Entity("DepartmentStore.Entities.Supplier", b =>
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.Product", b =>
+                {
+                    b.Navigation("Inventory");
+
+                    b.Navigation("OrderDetails");
+                });
+
+            modelBuilder.Entity("DepartmentStore.DataAccess.Entities.Supplier", b =>
                 {
                     b.Navigation("Products");
                 });

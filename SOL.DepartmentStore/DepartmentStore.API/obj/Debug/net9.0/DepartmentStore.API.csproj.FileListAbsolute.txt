@@ -323,3 +323,4 @@ H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.
 H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.API\obj\Debug\net9.0\DepartmentStore.API.pdb
 H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.API\obj\Debug\net9.0\DepartmentStore.API.genruntimeconfig.cache
 H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.API\obj\Debug\net9.0\ref\DepartmentStore.API.dll
+H:\PraticeCodeC#\PRN232\DepartmentStore_DSM\SOL.DepartmentStore\DepartmentStore.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

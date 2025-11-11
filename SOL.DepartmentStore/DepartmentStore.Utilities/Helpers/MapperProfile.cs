@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using DepartmentStore.DataAccess.Entities;
-using DepartmentStore.Entities;
 using DepartmentStore.Utilities.DTOs;
 using DepartmentStore.Utilities.DTOs.Auth;
 
@@ -57,7 +56,9 @@ namespace DepartmentStore.Utilities.Helpers
                 .ForMember(dest => dest.UnitPrice, opt => opt.Ignore());
 
             // ===== Payment Mapping =====
-            CreateMap<Payment, PaymentDto>();
+            // Trong MapperProfile
+            CreateMap<Payment, PaymentDto>()
+                .ForMember(d => d.OrderId, opt => opt.MapFrom(s => s.OrderId));
 
             // ===== User Mapping =====
             CreateMap<AppUser, UserDto>()

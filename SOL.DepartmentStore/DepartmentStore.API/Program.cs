@@ -1,9 +1,13 @@
+﻿// src/DepartmentStore.API/Program.cs
+
 using AutoMapper;
+using DepartmentStore.API.OData;
 using DepartmentStore.DataAccess;
+using DepartmentStore.DataAccess.Entities;
 using DepartmentStore.DataAccess.Repositories;
-using DepartmentStore.Entities;
 using DepartmentStore.Service.Implementations;
 using DepartmentStore.Service.Interfaces;
+using DepartmentStore.Utilities.Helpers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.OData;
@@ -15,14 +19,15 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 
-// ========================= DATABASE CONTEXT =========================
+// ========================= 1. DATABASE CONTEXT =========================
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(
         configuration.GetConnectionString("DefaultConnection")!,
         new MySqlServerVersion(new Version(8, 0, 32)))
-);
+        .EnableDetailedErrors()
+        .EnableSensitiveDataLogging());
 
-// ========================= IDENTITY CONFIG =========================
+// ========================= 2. IDENTITY CONFIG =========================
 builder.Services
     .AddIdentity<AppUser, AppRole>(options =>
     {
@@ -31,40 +36,43 @@ builder.Services
         options.Password.RequireUppercase = false;
         options.Password.RequireNonAlphanumeric = false;
         options.Password.RequiredLength = 6;
+        options.User.RequireUniqueEmail = true;
+        options.SignIn.RequireConfirmedEmail = false;
     })
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 
-// ========================= REPOSITORIES & SERVICES =========================
-builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+// ========================= 3. REPOSITORIES & SERVICES =========================
+builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
-builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ISupplierService, SupplierService>();
 builder.Services.AddScoped<IInventoryService, InventoryService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IPaymentService, PaymentService>();
 
+// ========================= 4. AUTOMAPPER =========================
+builder.Services.AddAutoMapper(typeof(MapperProfile));
 
-// builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();   // <-- uncomment if you have a UnitOfWork
-
-// ========================= AUTOMAPPER =========================
-builder.Services.AddAutoMapper(typeof(DepartmentStore.Utilities.Helpers.MapperProfile));
-
-
-// ========================= CONTROLLERS + ODATA + JSON =========================
+// ========================= 5. CONTROLLERS + ODATA + RAZOR PAGES =========================
 builder.Services
     .AddControllers(options => options.ReturnHttpNotAcceptable = true)
-    .AddXmlSerializerFormatters()                     // XML support
+    .AddXmlSerializerFormatters()
     .AddNewtonsoftJson(opt =>
         opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore)
     .AddOData(opt =>
     {
         opt.Select().Filter().OrderBy().Count().Expand().SetMaxTop(100);
+        opt.AddRouteComponents("odata", EdmModelBuilder.GetEdmModel());
     });
 
-// ========================= JWT AUTHENTICATION =========================
+// Nếu API có Razor Pages (không cần thiết)
+// builder.Services.AddRazorPages(); // XÓA nếu không dùng
+
+// ========================= 6. JWT AUTHENTICATION =========================
 var jwtSection = configuration.GetSection("JwtSettings");
 var key = Encoding.UTF8.GetBytes(jwtSection["Key"]!);
 
@@ -75,7 +83,7 @@ builder.Services.AddAuthentication(options =>
 })
 .AddJwtBearer(options =>
 {
-    options.RequireHttpsMetadata = false;   // set true in production
+    options.RequireHttpsMetadata = false;
     options.SaveToken = true;
     options.TokenValidationParameters = new TokenValidationParameters
     {
@@ -85,34 +93,38 @@ builder.Services.AddAuthentication(options =>
         ValidateIssuerSigningKey = true,
         ValidIssuer = jwtSection["Issuer"],
         ValidAudience = jwtSection["Audience"],
-        IssuerSigningKey = new SymmetricSecurityKey(key)
+        IssuerSigningKey = new SymmetricSecurityKey(key),
+        ClockSkew = TimeSpan.Zero
     };
 });
 
-// ========================= CORS (optional but recommended) =========================
+builder.Services.AddAuthorization();
+
+// ========================= 7. CORS =========================
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", p =>
-        p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+    options.AddPolicy("AllowAll", policy =>
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader());
 });
 
-// ========================= SWAGGER =========================
+// ========================= 8. SWAGGER =========================
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "Department Store Management API",
+        Title = "Department Store API",
         Version = "v1",
-        Description = "API for Department Store Management (DSM) Project"
+        Description = "PRN232 - Department Store Management System"
     });
 
-    // JWT in Swagger UI
     var jwtSecurityScheme = new OpenApiSecurityScheme
     {
         Scheme = "bearer",
         BearerFormat = "JWT",
-        Name = "Authorization",
+        Name = "JWT Authentication",
         In = ParameterLocation.Header,
         Type = SecuritySchemeType.Http,
         Description = "Enter **Bearer** [space] then your token.",
@@ -130,22 +142,31 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-// ========================= BUILD APP =========================
+// ========================= 9. BUILD APP =========================
 var app = builder.Build();
 
-// ========================= SEED DATABASE =========================
+// ========================= 10. SEED DATABASE =========================
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
-    await SeedDb.InitializeAsync(services);
+    var logger = services.GetRequiredService<ILogger<Program>>();
+    try
+    {
+        await SeedDb.InitializeAsync(services);
+        logger.LogInformation("Database seeded successfully.");
+    }
+    catch (Exception ex)
+    {
+        logger.LogError(ex, "Error seeding database.");
+    }
 }
 
-// ========================= MIDDLEWARE PIPELINE =========================
+// ========================= 11. MIDDLEWARE =========================
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "DSM API v1"));
 }
 else
 {
@@ -154,9 +175,7 @@ else
 }
 
 app.UseHttpsRedirection();
-
-app.UseCors("AllowAll");          // <-- remove or restrict in production
-
+app.UseCors("AllowAll");
 app.UseAuthentication();
 app.UseAuthorization();
 

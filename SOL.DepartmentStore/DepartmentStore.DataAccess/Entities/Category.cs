@@ -1,14 +1,13 @@
-﻿using DepartmentStore.DataAccess.Entities;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace DepartmentStore.Entities
+namespace DepartmentStore.DataAccess.Entities
 {
     public class Category : BaseEntity
     {
         [Required, MaxLength(100)]
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
         public string? Description { get; set; }
 
-        public ICollection<Product>? Products { get; set; }
+        public ICollection<Product> Products { get; set; } = null;
     }
 }

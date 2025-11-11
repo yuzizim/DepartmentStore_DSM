@@ -1,6 +1,4 @@
-﻿using DepartmentStore.Entities;
-using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DepartmentStore.DataAccess.Entities
@@ -9,14 +7,11 @@ namespace DepartmentStore.DataAccess.Entities
     {
         [Required]
         public string Token { get; set; } = string.Empty;
-
         public DateTime Expires { get; set; }
-
         public bool IsRevoked { get; set; } = false;
 
-        [ForeignKey(nameof(User))]
+        [ForeignKey(nameof(AppUser))]
         public Guid UserId { get; set; }
-
         public AppUser? User { get; set; }
 
         [NotMapped]

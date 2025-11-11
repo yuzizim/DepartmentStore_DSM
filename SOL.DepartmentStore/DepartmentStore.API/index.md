@@ -29,7 +29,7 @@ dotnet ef migrations remove
 
 # Account for test
 Role			  |Email				|Password
-Admin			  | admin@dsm.com		| Admin@123
+Admin			  | admin@dsm.com		| Test@123
 Manager			  | manager@dsm.com		| Test@123
 SalesEmployee	  | sales@dsm.com		| Test@123
 InventoryEmployee |	inventory@dsm.com	| Test@123

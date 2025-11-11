@@ -1,5 +1,4 @@
 ﻿using DepartmentStore.DataAccess.Entities;
-using DepartmentStore.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;

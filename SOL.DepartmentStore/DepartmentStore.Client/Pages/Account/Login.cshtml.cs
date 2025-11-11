@@ -86,9 +86,9 @@ namespace DepartmentStore.Client.Pages.Account
 
                 // Điều hướng theo role
                 if (loginData.Roles.Contains("Admin"))
-                    return RedirectToPage("/Dashboard/Admin");
-                else if (loginData.Roles.Contains("Manager"))
-                    return RedirectToPage("/Dashboard/Manager");
+                    return RedirectToPage("/Dashboard/Admin/Index");
+                //else if (loginData.Roles.Contains("Manager"))
+                //    return RedirectToPage("/Dashboard/Manager");
                 else
                     return RedirectToPage("/Dashboard/Employee");
             }

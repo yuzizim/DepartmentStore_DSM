@@ -1,12 +1,10 @@
-﻿using DepartmentStore.DataAccess.Entities;
-using System;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DepartmentStore.Entities
+namespace DepartmentStore.DataAccess.Entities
 {
     public class Inventory : BaseEntity
     {
-        [ForeignKey("Product")]
+        [ForeignKey(nameof(Product))]
         public Guid ProductId { get; set; }
         public Product? Product { get; set; }
 
